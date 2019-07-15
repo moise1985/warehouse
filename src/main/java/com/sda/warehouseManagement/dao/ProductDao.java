@@ -7,7 +7,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.sda.warehouseManagement.model.Order;
 import com.sda.warehouseManagement.model.Product;
 
 public class ProductDao {
@@ -43,7 +42,7 @@ public class ProductDao {
 		try {
 			Transaction transaction = session.beginTransaction();
 
-			productList = session.createQuery("from Order").list();
+			productList = session.createQuery("from Product").list();
 
 			transaction.commit();
 
